@@ -1,176 +1,159 @@
 /* ---- Tokens ---- */
-:root {
-  --paper: #F7F6F3;
-  --ink: #1D1F23;
-  --ink-soft: #55585F;
-  --rule: #DEDDD7;
-  --accent-did: #3E5C76;
-  --accent-learned: #6B7156;
-  --max-width: 640px;
-  --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+:root{
+  --paper: #F2EFE7;
+  --ink: #1C2129;
+  --ink-soft: #3A3F49;
+  --muted: #6B6450;
+  --rule: #D9D3C1;
+  --blue: #2E5266;
+  --rust: #99451F;
+  --max: 720px;
 }
 
-* { box-sizing: border-box; }
+/* ---- Accessibility utilities ---- */
 
-html {
-  -webkit-font-smoothing: antialiased;
+.visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-body {
+.skip-link{
+  position: absolute;
+  left: 8px;
+  top: -60px;
+  z-index: 100;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus{
+  top: 8px;
+  color: var(--paper);
+}
+
+*{ box-sizing: border-box; }
+
+html{ scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *{ animation: none !important; transition: none !important; }
+}
+
+body{
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--font);
-  font-size: 17px;
-  line-height: 1.6;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: var(--accent-did);
-  text-decoration-color: rgba(62, 92, 118, 0.35);
-  text-underline-offset: 3px;
-}
-
-a:hover,
-a:focus-visible {
-  text-decoration-color: currentColor;
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--accent-did);
+a{ color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover{ color: var(--rust); }
+a:focus-visible, button:focus-visible, summary:focus-visible{
+  outline: 2px solid var(--rust);
   outline-offset: 3px;
+  border-radius: 2px;
 }
 
-/* ---- Header ---- */
+/* Programmatic-focus targets for the skip link and in-page jumps:
+   the focus move itself is what matters for keyboard/AT users,
+   not a visible outline around a whole landmark or heading. */
+[tabindex="-1"]:focus{ outline: none; }
 
-.site-header {
-  max-width: var(--max-width);
+.wrap{
+  max-width: var(--max);
   margin: 0 auto;
-  padding: 64px 24px 40px;
+  padding: 0 24px;
+}
+
+/* ---------- Hero ---------- */
+
+.hero{
+  padding: 88px 0 56px;
   border-bottom: 1px solid var(--rule);
-  text-align: center;
 }
-
-.name {
-  font-family: var(--font);
+.hero .name{
+  margin: 0 0 14px;
+  font-size: clamp(2.1rem, 5vw, 2.9rem);
   font-weight: 700;
-  font-size: 2.25rem;
-  margin: 0 0 8px;
   letter-spacing: -0.01em;
+  line-height: 1.05;
 }
-
-.tagline {
-  margin: 0 auto 24px;
-  color: var(--ink-soft);
-  font-size: 1.05rem;
+.hero .tagline{
+  margin: 0 0 28px;
   max-width: 46ch;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.18rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
 }
-
-.contact-list {
+.contact-list{
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px 20px;
-  padding: 0;
-  margin: 0;
-  font-size: 0.95rem;
+  gap: 6px 22px;
+  font-size: 0.94rem;
+}
+.contact-list li{ position: relative; }
+.contact-list a{ color: var(--ink-soft); }
+.contact-list a:hover{ color: var(--rust); }
+
+/* ---------- Section shells ---------- */
+
+section{ padding: 56px 0; border-bottom: 1px solid var(--rule); }
+section:last-of-type{ border-bottom: none; }
+
+.section-heading{
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.section-sub{
+  margin: 0 0 36px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  max-width: 50ch;
 }
 
-.contact-list li + li {
+/* ---------- Role mark (logo / initials tile) ---------- */
+
+.role-mark{
   position: relative;
-  padding-left: 20px;
-}
-
-.contact-list li + li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--rule);
-}
-
-/* ---- Roles ---- */
-
-.section-heading {
-  max-width: var(--max-width);
-  margin: 40px auto 0;
-  padding: 0 24px;
-  font-family: var(--font);
-  font-weight: 700;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ink-soft);
-}
-
-.roles {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 8px 24px 24px;
-  position: relative;
-}
-
-.role {
-  display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: 20px;
-  padding: 40px 0;
-  position: relative;
-}
-
-.role + .role {
-  border-top: 1px solid var(--rule);
-}
-
-/* spine connecting the role marks, since this is a timeline */
-.role::before {
-  content: "";
-  position: absolute;
-  left: 21px;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: var(--rule);
-  z-index: 0;
-}
-
-.role:first-child::before {
-  top: 40px;
-}
-
-.role:last-child::before {
-  bottom: calc(100% - 40px - 44px);
-}
-
-.role-mark {
-  position: relative;
-  z-index: 1;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 6px;
   overflow: hidden;
   color: #fff;
-  font-family: var(--font);
-  font-size: 0.85rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+  flex-shrink: 0;
 }
-
-.role-mark-initials {
+.role-mark-initials{
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.role-mark-logo {
+.role-mark-logo{
   position: absolute;
   inset: 0;
   width: 100%;
@@ -178,83 +161,130 @@ button:focus-visible {
   object-fit: cover;
 }
 
-.role-heading h2 {
-  font-family: var(--font);
-  font-weight: 700;
-  font-size: 1.4rem;
-  margin: 0 0 4px;
+/* ---------- Featured work ---------- */
+
+.project-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.role-meta {
-  margin: 0 0 24px;
-  color: var(--ink-soft);
-  font-size: 0.92rem;
+.project{
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 18px;
+  padding: 28px 0;
+  border-top: 1px solid var(--rule);
 }
+.project:first-of-type{ border-top: none; padding-top: 0; }
 
-.role-block + .role-block {
-  margin-top: 20px;
+.project-meta{
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 2px 0 10px;
 }
+.project-meta .company{ color: var(--ink-soft); font-weight: 500; }
 
-.role-label {
-  margin: 0 0 6px;
+.project-title{
+  margin: 0 0 10px;
+  font-size: 1.22rem;
   font-weight: 600;
-  font-size: 0.95rem;
+  letter-spacing: -0.005em;
 }
-
-.role-label.did { color: var(--accent-did); }
-.role-label.learned { color: var(--accent-learned); }
-
-.role-block p:last-child {
-  margin: 0;
-  max-width: 62ch;
-}
-
-/* ---- Footer ---- */
-
-.site-footer {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 24px 24px 64px;
+.project-body{
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.02rem;
   color: var(--ink-soft);
-  font-size: 0.85rem;
+  line-height: 1.6;
+  max-width: 56ch;
+}
+.project-body p{ margin: 0 0 12px; }
+.project-body p:last-child{ margin-bottom: 0; }
+
+.project-body strong{ color: var(--rust); font-weight: 700; }
+
+.project-link{
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.92rem;
+  font-weight: 500;
 }
 
-.site-footer p {
+/* ---------- Career timeline ---------- */
+
+.timeline{
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+.timeline li + li{ border-top: 1px solid var(--rule); }
+
+.role{
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 18px;
+  padding: 18px 0;
+}
+
+.role-dates{
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.role-title{
   margin: 0;
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+.role-company{
+  margin: 2px 0 0;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
 }
 
-/* ---- Responsive ---- */
+.role details{ margin-top: 10px; }
+.role summary{
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--blue);
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.role summary::-webkit-details-marker{ display: none; }
+.role summary::before{
+  content: "+";
+  display: inline-block;
+  width: 14px;
+  font-weight: 600;
+}
+.role details[open] summary::before{ content: "\2013"; }
 
-@media (max-width: 480px) {
-  .site-header {
-    padding: 40px 20px 32px;
-  }
-
-  .name {
-    font-size: 1.85rem;
-  }
-
-  .role {
-    grid-template-columns: 36px 1fr;
-    gap: 14px;
-    padding: 28px 0;
-  }
-
-  .role-mark {
-    width: 36px;
-    height: 36px;
-    font-size: 0.75rem;
-  }
-
-  .role::before {
-    left: 17px;
-  }
+.role-detail{
+  margin-top: 10px;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  max-width: 58ch;
+}
+.role-detail p{ margin: 0 0 10px; }
+.role-detail .label{
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 3px;
 }
 
-/* ---- Reduced motion / print safety ---- */
+/* ---------- Responsive ---------- */
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    scroll-behavior: auto !important;
+@media (max-width: 560px){
+  .hero{ padding: 56px 0 40px; }
+  .project, .role{
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
   }
+  .role-mark{ width: 32px; height: 32px; font-size: 0.7rem; }
 }

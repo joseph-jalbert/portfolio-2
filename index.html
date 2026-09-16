@@ -3,234 +3,238 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Joe Jalbert — Software Engineer</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>Joe Jalbert - Software Engineer</title>
+<meta name="description" content="Joe Jalbert - software engineer working on ad-tech, clinical data systems, and consumer platforms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <h1 class="name">Joe Jalbert</h1>
-    <p class="tagline">Software engineer with 10 years of experience building out scalable user-friendly applications across media, healthcare, and consumer platforms</p>
+  <a class="skip-link" href="#work-heading">Skip to main content</a>
 
-    <ul class="contact-list">
-      <li><a href="mailto:joseph.a.jalbert@gmail.com">joseph.a.jalbert@gmail.com</a></li>
-      <li><a href="https://linkedin.com/in/joseph-jalbert" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://github.com/joseph-jalbert" target="_blank" rel="noopener">GitHub</a></li>
-      <li><a href="resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a></li>
-    </ul>
-  </header>
+  <div class="wrap">
 
-  <main>
+    <header class="hero">
+      <h1 class="name">Joe Jalbert</h1>
+      <p class="tagline">Software engineer - ten years building ad-tech, clinical data systems, and consumer platforms that hold up at scale.</p>
+      <ul class="contact-list" role="list">
+        <li><a href="mailto:joseph.a.jalbert@gmail.com">Email</a></li>
+        <li><a href="https://linkedin.com/in/joseph-jalbert" target="_blank" rel="noopener">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        <li><a href="https://github.com/joseph-jalbert" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        <li><a href="resume.pdf" target="_blank" rel="noopener">Résumé (PDF)<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+      </ul>
+    </header>
 
-    <!--
-      Each role-mark shows a colored initials tile by default. Drop a logo file
-      into images/ (square, ~200×200px, PNG/SVG with transparent background works
-      best) and point the <img> src at it — the tile automatically switches to the
-      logo and hides the initials. Leave the src pointing at a file that doesn't
-      exist yet and the initials placeholder keeps showing, so it's safe to leave
-      as-is until you have real logos.
-    -->
+    <main>
 
-    <h2 class="section-heading">Jobs</h2>
-    <div class="roles">
+    <section aria-labelledby="work-heading">
+      <h2 class="section-heading" id="work-heading" tabindex="-1">Featured work</h2>
+      <p class="section-sub">A few projects that show how I think through a problem, end to end.</p>
 
-    <article class="role">
-      <div class="role-mark" style="background:#3E5C76;">
-        <span class="role-mark-initials">PI</span>
-        <img class="role-mark-logo" src="images/people_inc_co_logo.jpeg" alt="" onerror="this.remove()">
-      </div>
-      <div class="role-body">
-        <div class="role-heading">
-          <h2>Senior Software Engineer</h2>
-          <p class="role-meta">People.inc (formerly Dotdash Meredith) &middot; Jan 2023 — Feb 2026</p>
+      <ul class="project-list" role="list">
+
+      <li class="project">
+        <div class="role-mark" style="background:#3E5C76;" aria-hidden="true">
+          <span class="role-mark-initials">PI</span>
+          <img class="role-mark-logo" src="images/people_inc_co_logo.jpeg" alt="" onerror="this.remove()">
         </div>
-
-        <div class="role-block">
-          <p class="role-label did">What I did</p>
-          <p>Developed a process for maintaining critical ad-targeting audience data without the use of third party cookies by leading the end-to-end build of a Private Aggregation API pipeline - from browser through a Trusted Execution Environment into an S3 bucket, achieving a 94% correlation with the legacy cookie method. Also drove a shift to config-driven ad delivery, moving lazy-loading, refresh, and ad placement logic out of hard-coded rules and into centrally managed configs across a portfolio of high-traffic sites responsible for roughly 1% of all ads served on the internet, giving product and revenue teams direct control over viewability and revenue trade-offs without code deployments.</p>
+        <div>
+          <p class="project-meta"><span class="company">People.inc</span> &middot; 2023-2026</p>
+          <h3 class="project-title">Ad targeting without third-party cookies</h3>
+          <div class="project-body">
+            <p>Led the end-to-end build of a Private Aggregation API pipeline - from the browser, through a Trusted Execution Environment, into S3 - replacing cookie-based audience data for ad targeting. <strong>94% correlation</strong> with the legacy cookie method, with no reliance on third-party cookies.</p>
+            <p>Also moved lazy-loading, refresh, and placement logic out of hard-coded rules and into centrally managed configs across the site portfolio, giving product and revenue teams direct control over viewability and revenue trade-offs without a code deploy. Applied across sites serving roughly <strong>1% of all ads on the internet</strong>.</p>
+          </div>
         </div>
+      </li>
 
-        <div class="role-block">
-          <p class="role-label learned">What I learned</p>
-          <p>The importance of proactive communication with third party stakeholders (Google), especially when using new and not widely adopted software.</p>
+      <li class="project">
+        <div class="role-mark" style="background:#6B7156;" aria-hidden="true">
+          <span class="role-mark-initials">OT</span>
+          <img class="role-mark-logo" src="images/onestudyteam_logo.jpeg" alt="" onerror="this.remove()">
         </div>
-      </div>
-    </article>
-
-    <article class="role">
-      <div class="role-mark" style="background:#6B7156;">
-        <span class="role-mark-initials">OT</span>
-        <img class="role-mark-logo" src="images/onestudyteam_logo.jpeg" alt="" onerror="this.remove()">
-      </div>
-      <div class="role-body">
-        <div class="role-heading">
-          <h2>Software Engineer</h2>
-          <p class="role-meta">OneStudyTeam (formerly Reify Health) &middot; May 2022 — Dec 2022</p>
+        <div>
+          <p class="project-meta"><span class="company">OneStudyTeam</span> &middot; 2022</p>
+          <h3 class="project-title">Direct data capture for clinical trials</h3>
+          <div class="project-body">
+            <p>Built production features for Direct Data Capture software that replaced the mountains of paperwork traditionally used to collect clinical trial data, including for Pfizer's Lyme disease vaccine study. Paper-based data collection is one of the biggest bottlenecks in getting a drug to market, so digitizing it directly sped up the trials it touched. React/TypeScript on the front end, validated end to end against API-driven, PostgreSQL-backed storage.</p>
+          </div>
         </div>
+      </li>
 
-        <div class="role-block">
-          <p class="role-label did">What I did</p>
-          <p>Built Direct Data Capture software to manage high-stakes clinical data for large-scale trials, including Pfizer Lyme disease vaccine studies. Developed production features in React (TypeScript), ensuring data validation and integrity for API-driven interactions with PostgreSQL-backed storage.</p>
+      <li class="project">
+        <div class="role-mark" style="background:#4F6B76;" aria-hidden="true">
+          <span class="role-mark-initials">SP</span>
+          <img class="role-mark-logo" src="images/mozilla-firefox-icon-pmcx0pu2xayceun4-c.png" alt="" onerror="this.remove()">
         </div>
-
-        <div class="role-block">
-          <p class="role-label learned">What I learned</p>
-          <p>The importance of working closely with QA engineers (if you're fortunate enough to have them!) to understand what can go wrong - even if you have automated testing.</p>
+        <div>
+          <p class="project-meta"><span class="company">Personal project</span> &middot; 2018-present</p>
+          <h3 class="project-title">ColorTabs, a Firefox extension</h3>
+          <div class="project-body">
+            <p>Lets you set a custom color theme per domain, so different environments are visually distinguishable at a glance. Built out of my own need for it as a developer, still untouched in years and still picking up reviews from a few hundred active users.</p>
+          </div>
+          <a class="project-link" href="https://addons.mozilla.org/en-US/firefox/addon/colortabs/" target="_blank" rel="noopener">View on Firefox Add-ons<span class="visually-hidden"> (opens in a new tab)</span></a>
         </div>
-      </div>
-    </article>
+      </li>
 
-    <article class="role">
-      <div class="role-mark" style="background:#9A6B4F;">
-        <span class="role-mark-initials">XT</span>
-        <img class="role-mark-logo" src="images/x_team_logo.jpeg" alt="" onerror="this.remove()">
-      </div>
-      <div class="role-body">
-        <div class="role-heading">
-          <h2>Senior Software Engineer</h2>
-          <p class="role-meta">X-Team &middot; Oct 2018 — Jan 2022</p>
-        </div>
+      </ul>
 
-        <div class="role-block">
-          <p class="role-label did">What I did</p>
-          <p>Worked across two flagship products in a cross-functional team with product, design, and QA. On beachbodyondemand.com, built a social, group-based workout experience using React and Redux, improved page-load performance by migrating the third-party SSO integration (Akamai) from client-side to server-side (Node.js/Express). On thechive.com, maintained the WordPress VIP publication and built a Node.js/Puppeteer scraper against the WP API to automatically detect and log malicious third-party ad activity for security analysis and reporting.</p>
-        </div>
+    </section>
 
-        <div class="role-block">
-          <p class="role-label learned">What I learned</p>
-          <p>The importance of architectural diagrams for both planning and communicating with technical and non-technical parties alike.</p>
-        </div>
-      </div>
-    </article>
+    <section aria-labelledby="career-heading">
+      <h2 class="section-heading" id="career-heading">Career</h2>
+      <p class="section-sub">The rest of the path, condensed. Expand any role for more.</p>
 
-    <article class="role">
-      <div class="role-mark" style="background:#5B4F76;">
-        <span class="role-mark-initials">AW</span>
-        <img class="role-mark-logo" src="images/adweek_logo.jpeg" alt="" onerror="this.remove()">
-      </div>
-      <div class="role-body">
-        <div class="role-heading">
-          <h2>Software Developer</h2>
-          <p class="role-meta">Adweek &middot; Aug 2017 — Sep 2018</p>
-        </div>
+      <ol class="timeline" role="list">
 
-        <div class="role-block">
-          <p class="role-label did">What I did</p>
-          <p>Built custom CMS tooling and front-end features for contributors at a leading marketing publication, migrated 10,000+ legacy video embeds to a new hosting platform using PHP and MySQL, and integrated a third-party authentication system to power a premium content paywall. Also redesigned the site's navigation menu to be fully customizable and implemented geolocation tooling to support GDPR compliance.</p>
-        </div>
+        <li><article class="role">
+          <div class="role-mark" style="background:#3E5C76;" aria-hidden="true">
+            <span class="role-mark-initials">PI</span>
+            <img class="role-mark-logo" src="images/people_inc_co_logo.jpeg" alt="" onerror="this.remove()">
+          </div>
+          <div>
+            <div class="role-dates">Jan 2023 – Feb 2026</div>
+            <h3 class="role-title">Senior Software Engineer</h3>
+            <p class="role-company">People.inc (formerly Dotdash Meredith)</p>
+            <details>
+              <summary aria-label="More detail about the People.inc role">More detail</summary>
+              <div class="role-detail">
+                <p>Led the build of a Private Aggregation API pipeline to replace third-party-cookie-based ad targeting, and moved ad delivery to a config-driven system across a portfolio serving roughly 1% of all ads on the internet.</p>
+                <span class="label">What I learned</span>
+                <p>The importance of proactive communication with third party stakeholders (Google), especially when using new and not widely adopted software.</p>
+              </div>
+            </details>
+          </div>
+        </article></li>
 
-        <div class="role-block">
-          <p class="role-label learned">What I learned</p>
-          <p>Patience and frustration tolerance from working in a legacy codebase that was built in a hurry. It's easy to grow frustrated in that scenario, but the reality is that "legacy" is just a dirty word for something that makes money.</p>
-        </div>
-      </div>
-    </article>
+        <li><article class="role">
+          <div class="role-mark" style="background:#6B7156;" aria-hidden="true">
+            <span class="role-mark-initials">OT</span>
+            <img class="role-mark-logo" src="images/onestudyteam_logo.jpeg" alt="" onerror="this.remove()">
+          </div>
+          <div>
+            <div class="role-dates">May 2022 – Dec 2022</div>
+            <h3 class="role-title">Software Engineer</h3>
+            <p class="role-company">OneStudyTeam (formerly Reify Health)</p>
+            <details>
+              <summary aria-label="More detail about the OneStudyTeam role">More detail</summary>
+              <div class="role-detail">
+                <p>Built production features for Direct Data Capture software that replaced paper-based data collection for clinical trials, including Pfizer's Lyme disease vaccine study.</p>
+                <span class="label">What I learned</span>
+                <p>The value of working closely with QA engineers (if you're fortunate enough to have them) to understand what can still go wrong, even with automated testing in place.</p>
+              </div>
+            </details>
+          </div>
+        </article></li>
 
-    <article class="role">
-      <div class="role-mark" style="background:#4F7668;">
-        <span class="role-mark-initials">MM</span>
-        <img class="role-mark-logo" src="images/morgan__morgan_llc_logo.jpeg" alt="" onerror="this.remove()">
-      </div>
-      <div class="role-body">
-        <div class="role-heading">
-          <h2>Web Developer</h2>
-          <p class="role-meta">Morgan &amp; Morgan &middot; Nov 2015 — Jan 2017</p>
-        </div>
+        <li><article class="role">
+          <div class="role-mark" style="background:#9A6B4F;" aria-hidden="true">
+            <span class="role-mark-initials">XT</span>
+            <img class="role-mark-logo" src="images/x_team_logo.jpeg" alt="" onerror="this.remove()">
+          </div>
+          <div>
+            <div class="role-dates">Oct 2018 – Jan 2022</div>
+            <h3 class="role-title">Senior Software Engineer</h3>
+            <p class="role-company">X-Team</p>
+            <details>
+              <summary aria-label="More detail about the X-Team role">More detail</summary>
+              <div class="role-detail">
+                <p>Worked across two flagship products in a cross-functional team with product, design, and QA. On beachbodyondemand.com, built a social, group-based workout experience in React/Redux, and improved page-load performance by moving the third-party SSO integration (Akamai) from client-side to server-side (Node/Express). On thechive.com, maintained the WordPress VIP publication and built a Node.js/Puppeteer scraper against the WP API to detect and log malicious third-party ad activity.</p>
+                <span class="label">What I learned</span>
+                <p>The value of architectural diagrams, for planning, and for communicating with technical and non-technical people alike.</p>
+              </div>
+            </details>
+          </div>
+        </article></li>
 
-        <div class="role-block">
-          <p class="role-label did">What I did</p>
-          <p>Developed and maintained custom marketing sites for a nationwide law firm, building interactive desktop and mobile features to improve the user experience. Brought legacy sites up to WCAG 2.0 accessibility standards and ensured consistent cross-browser compatibility.</p>
-        </div>
+        <li><article class="role">
+          <div class="role-mark" style="background:#6B5B95;" aria-hidden="true">
+            <span class="role-mark-initials">TC</span>
+            <img class="role-mark-logo" src="images/tech_for_campaigns.avif" alt="" onerror="this.remove()">
+          </div>
+          <div>
+            <div class="role-dates">2020</div>
+            <h3 class="role-title">Volunteer Software Engineer</h3>
+            <p class="role-company">Tech for Campaigns</p>
+            <details>
+              <summary aria-label="More detail about the Tech for Campaigns role">More detail</summary>
+              <div class="role-detail">
+                <p>Built campaign websites for state-level congressional candidates running in competitive races, built for speed to help drum up grassroots support and volunteers under a tight election timeline.</p>
+                <span class="label">What I learned</span>
+                <p>Clients often don't know exactly what they want. It's more productive to mock something up and show them than to ask for it from a blank slate.</p>
+              </div>
+            </details>
+          </div>
+        </article></li>
 
-        <div class="role-block">
-          <p class="role-label learned">What I learned</p>
-          <p>Sometimes the only way to truly know if something works is to manually test it. When making legacy sites accessible, just adding the proper HTML attributes was often insufficient. I had to go through the site with a screen reader the way a visually impaired user would.</p>
-        </div>
-      </div>
-    </article>
+        <li><article class="role">
+          <div class="role-mark" style="background:#5B4F76;" aria-hidden="true">
+            <span class="role-mark-initials">AW</span>
+            <img class="role-mark-logo" src="images/adweek_logo.jpeg" alt="" onerror="this.remove()">
+          </div>
+          <div>
+            <div class="role-dates">Aug 2017 – Sep 2018</div>
+            <h3 class="role-title">Software Developer</h3>
+            <p class="role-company">Adweek</p>
+            <details>
+              <summary aria-label="More detail about the Adweek role">More detail</summary>
+              <div class="role-detail">
+                <p>Built custom CMS tooling and front-end features for contributors, migrated 10,000+ legacy video embeds to a new hosting platform (PHP/MySQL), and integrated third-party auth to power a premium content paywall. Also rebuilt site navigation to be fully customizable and added geolocation tooling for GDPR compliance.</p>
+                <span class="label">What I learned</span>
+                <p>Patience with a legacy codebase built in a hurry. It's easy to get frustrated, but "legacy" is just a dirty word for something that makes money.</p>
+              </div>
+            </details>
+          </div>
+        </article></li>
 
-    <article class="role">
-      <div class="role-mark" style="background:#76574F;">
-        <span class="role-mark-initials">MG</span>
-        <img class="role-mark-logo" src="images/moxie-media-group-logo.png" alt="" onerror="this.remove()">
-      </div>
-      <div class="role-body">
-        <div class="role-heading">
-          <h2>Web Development Intern</h2>
-          <p class="role-meta">Moxie Media Group &middot; Mar 2015 — Sep 2015</p>
-        </div>
+        <li><article class="role">
+          <div class="role-mark" style="background:#4F7668;" aria-hidden="true">
+            <span class="role-mark-initials">MM</span>
+            <img class="role-mark-logo" src="images/morgan__morgan_llc_logo.jpeg" alt="" onerror="this.remove()">
+          </div>
+          <div>
+            <div class="role-dates">Nov 2015 – Jan 2017</div>
+            <h3 class="role-title">Web Developer</h3>
+            <p class="role-company">Morgan &amp; Morgan</p>
+            <details>
+              <summary aria-label="More detail about the Morgan &amp; Morgan role">More detail</summary>
+              <div class="role-detail">
+                <p>Built and maintained marketing sites for a nationwide law firm, brought legacy sites up to WCAG 2.0, and ensured cross-browser compatibility.</p>
+                <span class="label">What I learned</span>
+                <p>The only way to really know if something's accessible is to test it manually, going through the site with a screen reader the way a visually impaired user would, not just adding the right HTML attributes.</p>
+              </div>
+            </details>
+          </div>
+        </article></li>
 
-        <div class="role-block">
-          <p class="role-label did">What I did</p>
-          <p>Maintained various client sites for a web development agency, fixing front-end bugs and running QA testing across projects.</p>
-        </div>
+        <li><article class="role">
+          <div class="role-mark" style="background:#76574F;" aria-hidden="true">
+            <span class="role-mark-initials">MG</span>
+            <img class="role-mark-logo" src="images/moxie-media-group-logo.png" alt="" onerror="this.remove()">
+          </div>
+          <div>
+            <div class="role-dates">Mar 2015 – Sep 2015</div>
+            <h3 class="role-title">Web Development Intern</h3>
+            <p class="role-company">Moxie Media Group</p>
+            <details>
+              <summary aria-label="More detail about the Moxie Media Group role">More detail</summary>
+              <div class="role-detail">
+                <p>Maintained client sites for a web development agency, fixing front-end bugs and running QA across projects.</p>
+                <span class="label">What I learned</span>
+                <p>Every client had a different idea of "done," even for similar sites. Better to pin that down early than assume.</p>
+              </div>
+            </details>
+          </div>
+        </article></li>
 
-        <div class="role-block">
-          <p class="role-label learned">What I learned</p>
-          <p>Every client had their own idea of what "done" looked like, even for similar sites. I learned to pin that down early instead of making assumptions.</p>
-        </div>
-      </div>
-    </article>
+      </ol>
+    </section>
 
-    </div>
+    </main>
 
-    <h2 class="section-heading">Side Projects</h2>
-    <div class="roles">
-
-    <article class="role">
-      <div class="role-mark" style="background:#4F6B76;">
-        <span class="role-mark-initials">SP</span>
-        <img class="role-mark-logo" src="images/mozilla-firefox-icon-pmcx0pu2xayceun4-c.png" alt="" onerror="this.remove()">
-      </div>
-      <div class="role-body">
-        <div class="role-heading">
-          <h2><a href="https://addons.mozilla.org/en-US/firefox/addon/colortabs/" target="_blank" rel="noopener">ColorTabs - Firefox Browser Extension</a></h2>
-          <p class="role-meta">Personal project &middot; 2018 - current</p>
-        </div>
-
-        <div class="role-block">
-          <p class="role-label did">What I did</p>
-          <p>Built an extension enabling the user to set custom color themes for different domains. The idea came from the need to have a visually obvious way to distinguish different environments when doing web development work.</p>
-        </div>
-
-        <div class="role-block">
-          <p class="role-label learned">What I learned</p>
-          <p>The joy of creating something that other people find helpful. I haven't made any code updates in years, but still have an active user base of several hundred people and continue to receive reviews and feedback.</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="role">
-      <div class="role-mark" style="background:#6B5B95;">
-        <span class="role-mark-initials">TC</span>
-        <img class="role-mark-logo" src="images/tech_for_campaigns.avif" alt="" onerror="this.remove()">
-      </div>
-      <div class="role-body">
-        <div class="role-heading">
-          <h2>Volunteer Software Engineer - Tech for Campaigns</h2>
-          <p class="role-meta">Tech for Campaigns &middot; 2020</p>
-        </div>
-
-        <div class="role-block">
-          <p class="role-label did">What I did</p>
-          <p>Built campaign websites for state level congressional candidates.</p>
-        </div>
-
-        <div class="role-block">
-          <p class="role-label learned">What I learned</p>
-          <p>Often times clients don't know exactly what they want. In these cases it can be more productive to mock something up and show them, rather than try and have them come up with something from a blank slate.</p>
-        </div>
-      </div>
-    </article>
-
-    </div>
-
-  </main>
-
-  <footer class="site-footer">
-    <p>Last updated 2026.</p>
-  </footer>
+  </div>
 
 </body>
 </html>
