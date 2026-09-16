@@ -20,7 +20,7 @@
       <h1 class="name">Joe Jalbert</h1>
       <p class="tagline">Software engineer - ten years building ad-tech, clinical data systems, and consumer platforms that hold up at scale.</p>
       <ul class="contact-list" role="list">
-        <li><a href="mailto:joseph.a.jalbert@gmail.com">Email</a></li>
+        <li><a href="#" id="email-link">Email</a></li>
         <li><a href="https://linkedin.com/in/joseph-jalbert" target="_blank" rel="noopener">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
         <li><a href="https://github.com/joseph-jalbert" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
         <li><a href="resume.pdf" target="_blank" rel="noopener">Résumé (PDF)<span class="visually-hidden"> (opens in a new tab)</span></a></li>
@@ -234,6 +234,14 @@
     </main>
 
   </div>
+
+  <script>
+    // Assembled at runtime so plain-text scrapers don't pick up the address from the page source.
+    var user = "joseph.a.jalbert";
+    var domain = "gmail.com";
+    var link = document.getElementById("email-link");
+    link.href = "mailto:" + user + "@" + domain;
+  </script>
 
 </body>
 </html>
